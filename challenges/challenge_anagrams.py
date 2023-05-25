@@ -8,6 +8,9 @@ def class_string(letters):
     # cria uma lista com as letras maiores ou iguais ao suporte
     return class_string(menor_sup) + [letters[0]] + class_string(maior_sup)
     # retorna a função e combina as listas na ordem correta
+    # letters[1:] neste trexo esta basicamente "fatiando" a string
+    # do inicio dela, sem contar o 1
+    # https://docs.python.org/pt-br/3/tutorial/introduction.html#lists
 
 
 def is_anagram(first_string, second_string):
