@@ -13,3 +13,5 @@ def is_palindrome_recursive(word, low_index, high_index):
     #  Retorne False se nenhuma palavra for passada por parâmetro
 
     return is_palindrome_recursive(word, low_index + 1, high_index - 1)
+    #  verifica uma subpalavra da palavra original,
+    #  exclui a primeira e a ultima letra
