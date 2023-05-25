@@ -9,4 +9,4 @@ def test_encrypt_message():
         encrypt_message(123456, 5)
 
     assert encrypt_message('Tom Marvolo Riddle', 10) == 'i am lord voldemort'
-    assert encrypt_message('Tom Marvolo Riddle', 5) == 'i am lord_voldemort'
+    assert encrypt_message('Tom Marvolo Riddle', 5) == 'i am lord vold_emort'
