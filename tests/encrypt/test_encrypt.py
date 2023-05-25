@@ -6,7 +6,9 @@ def test_encrypt_message():
     with pytest.raises(TypeError, match="tipo inválido para key"):
         encrypt_message('Tom Marvolo Riddle', '5')
     with pytest.raises(TypeError, match="tipo inválido para message"):
-        encrypt_message(123456, 5)
+        encrypt_message(123456, 3)
 
-    assert encrypt_message('Tom Marvolo Riddle', 10) == 'i am lord voldemort'
-    assert encrypt_message('Tom Marvolo Riddle', 5) == 'i am lord vold_emort'
+    assert encrypt_message('Tom Marvolo Riddle', 10) == 'elddiR o_lovraM moT'
+    assert encrypt_message('Tom Marvolo Riddle', 5) == 'M moT_elddiR olovra'
+    assert encrypt_message('Tom Marvolo Riddle', 3) == 'moT_elddiR olovraM '
+    assert encrypt_message('Tom Marvolo Riddle', -3) == 'elddiR olovraM moT'
